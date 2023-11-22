@@ -5,7 +5,7 @@ import os
 
 class OCREngine:
     @staticmethod
-    def extract_test(file_path):
+    def extract_text(file_path):
         """
         1. Open the image file path using Image library
         2. Using Pytesseract library to extract text from the image
