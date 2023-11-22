@@ -19,7 +19,7 @@ def index():
         if file and allowed_filename(file.filename):
             filename = save_uploaded_file(file)
             if filename:
-                file_path = os.path.join(app.config['UPLOAD_FOLDER'])
+                file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
                 ocr = OCREngine()
                 extract_text = ocr.extract_text(file_path=file_path)
                 return render_template("index.html", extract_text = extract_text)
